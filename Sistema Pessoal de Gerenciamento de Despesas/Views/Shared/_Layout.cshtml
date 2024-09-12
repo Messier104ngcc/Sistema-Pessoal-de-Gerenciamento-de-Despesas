@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sistema_Pessoal_de_Gerenciamento_de_Despesas</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sistema_Pessoal_de_Gerenciamento_de_Despesas.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheetHome.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="body">
+    <header class="header-prymary">
+        <nav class="navbar-link">
+            <div class="container-fluid">
+                <img class="img" src="/img/LOGO.png" />
+                <hr id="linha1"/>
+                <div class="navbar-link2">
+                        <ul class="nav-list">
+                            <li>
+                                <a class="nav-link text-light m-2" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-house-fill m-2"></i>Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light m-2" asp-area="" asp-controller="Despesas" asp-action="Index"><i class="bi bi-cash-coin m-2"></i>Despesas</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light m-2" asp-area="" asp-controller="Bancos" asp-action="Index"><i class="bi bi-bank2 m-2"></i>Bancos</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light m-2" asp-area="" asp-controller="Agendamento" asp-action="Index"><i class="bi bi-calendar-check-fill m-2"></i>Agendamento</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>  
+        </nav>
+        <hr id="linha2" />
+        <ul class="nav-list2">
+            <li>
+                <a class="nav-link text-light m-2" asp-area="" asp-controller="Sair" asp-action="Index"><i class="bi bi-box-arrow-right mx-2"></i>Sair</a>
+            </li>
+        </ul>       
+    </header>
+    <footer class="footer">
+        <hr />
+        <div id="f">
+            <img class="img-perfil" atl="Imagem Perfil" src="/img/LOGO.png" />
+            <h1 id="Usuario" atl="Usuario">Usuario</h1>
+            <h2 id="h2">Copyrights © 2024 - Todos os direitos reservados</h2>
+        </div>
+    </footer>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema Pessoal de Gerenciamento de Despesas", "Sistema Pessoal de Gerenciamento de Despesas\Sistema Pessoal de Gerenciamento de Despesas.csproj", "{CE905CE3-CFBB-4730-B5ED-15039147D7D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE905CE3-CFBB-4730-B5ED-15039147D7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE905CE3-CFBB-4730-B5ED-15039147D7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE905CE3-CFBB-4730-B5ED-15039147D7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE905CE3-CFBB-4730-B5ED-15039147D7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E51AA0F-BBEA-4B8D-A6BC-D21EAA416652}
+	EndGlobalSection
+EndGlobal

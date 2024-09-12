@@ -1,0 +1,379 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+}
+
+.body {
+    background: #DBDBE1;
+}
+
+.header-prymary {
+    position: fixed; /* Fixa o menu na lateral */
+    top: 0;
+    left: 0;
+    width: 250px; /* Largura do menu */
+    height: 100vh; /* Altura de 100% da viewport */
+    background-color: #3C3E43; /* Fundo predefinido */
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center;
+}
+
+.container-fluid {
+    padding-right: 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    width: 100%; /* Ocupar a largura total do menu */
+    text-align: justify;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+    .nav-list li a:hover {
+        background-color: #DBDBE1; /* Fundo cinza claro ao passar o mouse */
+        padding: 10px;
+        touch-action: pinch-zoom; 
+    }
+
+.nav-top {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    width: 100%; /* Ocupar a largura total do menu */
+    text-align: justify;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.nav-list2 {
+    width: 100%; /* Ocupar a largura total do menu */
+    text-align: justify;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    padding: 10px;
+    top: 35%;
+    left: 40px;
+    font-size: 30px;
+}
+.nav-list2 li a:hover {
+    background-color: #DBDBE1; /* Fundo cinza claro ao passar o mouse */
+    padding: 10px;
+    touch-action: pinch-zoom;
+}
+.nav-list2 > li {
+    display: inline-block;
+}
+
+.img, svg {
+    width: 200px; /* Largura do logo */
+    margin-bottom: 0; /* Espaçamento abaixo do logo */
+}
+.img-perfil, svg {
+    margin-bottom: 0; /* Espaçamento abaixo do logo */
+    width: 60px; /* Largura da imagem */
+    height: 60px; /* Altura da imagem */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Ajusta a imagem para cobrir o conteúdo sem distorcer */
+    border: 2px solid #007bff;
+}
+#Usuario {
+    position: absolute;
+    text-align: end;
+    padding: 10px;
+    margin-left: 0;
+    background-color: #DBDBE1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    left: 4%;
+}
+#f {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px;
+    top: 50px;
+}
+
+#linha1 {
+    width: 90%; /* Define a largura da linha */
+    margin-left: 2%; /* Move a linha horizontalmente */
+    border: 0px solid #DBDBE1; /* Cor e espessura da linha */
+    margin-bottom: 25px; /* Espaço abaixo da linha */
+}
+#linha2 {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    position: relative;
+    width: 75%; /* Define a largura da linha */
+    margin-left: 2%; /* Move a linha horizontalmente */
+    border: 0px solid #DBDBE1; /* Cor e espessura da linha */
+    margin-bottom: 25px; /* Espaço abaixo da linha */
+    top: 39%;
+}
+
+.footer > hr {
+    position: relative;
+    width: 80%; /* Diminui a largura da linha (50% da largura da página) */
+    height: 2px; /* Define a espessura da linha */
+    background-color: #333; /* Cor da linha */
+    border: none; /* Remove qualquer borda padrão */
+    margin-right: 25%;
+    top: 65px;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 60px;
+    left: 300px;
+    width: 100%;
+    background-color: #DBDBE1;
+    text-align:  left;
+    padding: 0.1px;
+}
+
+#h2 {
+    position: absolute;
+    text-align: end;
+    padding: 10px;
+    margin-left: 0;
+    background-color: #DBDBE1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    left: 60%;
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 10px 5px; /* Reduz o padding em telas menores */
+        font-size: 0.875rem; /* Diminui o tamanho da fonte em telas menores */
+    }
+
+    @media (max-width: 768px) {
+        .footer h1 {
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer h1 {
+            font-size: 1rem;
+        }
+
+        .footer {
+            padding: 10px;
+        }
+    }
+
+    .content {
+        padding-bottom: 840px;
+    }
+}
+
+.cards {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas com tamanhos iguais */
+    gap: 100px; /* Espaço entre os cards */
+}
+
+
+
+/* Tornar responsivo em telas menores */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr; /* Em telas menores, empilha os cards */
+    }
+}
+
+
+.card1 {
+    display: flex;
+    background-color: white;
+    position: relative;
+    top: -60px; /* Move para baixo */
+    left: 0px; /* Move para a direita */
+    bottom: 200px;
+    margin: -10px;
+    margin-right: 20%;
+    padding: 20px ;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+
+.card2 {
+    display: flex;
+    background-color: white;
+    position: relative;
+    top: -60px; /* Move para baixo */
+    left: 20px; /* Move para a direita */
+    bottom: 200px;
+    margin: -10px;
+    margin-right: -45%;
+    padding: 45px;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+.saldo-tela {
+    padding: 1px;
+}
+    .saldo-tela > p {
+        position: relative;
+        left: 80px;
+        font-display: font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+    }
+
+.custom-select {
+    position: initial;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 20px;
+    left: 130px;
+}
+
+h5 {
+    position: relative;
+    left: 20px;
+    top: -20px;
+    font-display: font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+}
+h6 {
+    position: relative;
+    left: 20px;
+    top: -10px;
+    font-display: font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+}
+
+.receitas {
+    position: relative;
+    left: 80px;
+    font-display: font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    top:0px;
+    left: 300px;
+}
+.despesas {
+    position: relative;
+    left: 80px;
+    font-display: font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    top: 20px;
+    left: 300px;
+}
+
+.container {
+    display: flex;
+    position: page;
+    top: 20px;
+    margin-top: 120px;
+}
+
+    .container > main {
+        background-color: #DBDBE1;
+        padding: 20px;
+        padding-bottom: 100px;
+        padding-right: 90px;
+    }
+@media (max-width: 768px) {
+    .card-corpo, card1, card2 {
+        flex: 1 1 45%; /* Em telas menores, os itens ocupam 45% */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-corpo, card1, card2 {
+        flex: 1 1 100%; /* Em telas pequenas, os itens ocupam 100% */
+    }
+}
+
+.card-corpo {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between; /* Espaça os itens de forma uniforme */
+    position: relative;
+    top: -90px; /* Move para baixo */
+    left: 0px; /* Move para a direita */
+    bottom: 200px;
+    margin: 10px;
+    margin-right: -20%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+}
+h4 {
+    margin: 0; /* Remove margens padrão do h4 */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.btn  {
+        font-size: 20px; /* Aumenta o tamanho do texto */
+}    
+
+.btn-secondary {
+    display: grid;
+    margin: 10px;
+}
+
+
+.table {
+    background-color: #f0f0f0;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 120%; /* Largura fixa da tabela */
+    height: 150px; /* Altura fixa da tabela */
+    table-layout: fixed; /* Força o layout fixo */
+    margin: 10px;
+}
+
+.btn-table {
+    
+    display: flex;
+    padding: 10px 2px;
+    margin: 10px;
+    margin-right: 10px; /* Espaço à direita de cada botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    gap: 25px;
+}
+    .btn-table > button {
+        font-size: 20px; /* Aumenta o tamanho do texto */
+    }
+
+
+
+.btn-select {
+    display: flex;
+    gap: 50px;
+    margin: 10px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    width: 900px; /* Largura do botão */
+    height: 45px; /* Altura do botão */
+}
