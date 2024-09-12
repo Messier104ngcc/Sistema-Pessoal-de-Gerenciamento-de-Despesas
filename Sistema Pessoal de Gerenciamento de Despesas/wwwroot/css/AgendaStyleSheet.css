@@ -1,0 +1,157 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+}
+
+.body {
+    background-color: #DBDBE1;
+}
+.card-corpo {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between; /* Espaça os itens de forma uniforme */
+    position: relative;
+    top: -10%; /* Move para baixo */
+    left: 88%; /* Move para a direita */
+    bottom: 200px;
+    margin: 10px;
+    margin-right: -350%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    width: 300px; /* Largura do formulário */
+    margin: 50px 0 0 20px; /* Alinha o formulário no lado esquerdo */
+}
+
+.form-wrapper1 {
+    position:absolute;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    left: 80%;
+    top: 20%;
+}
+.form-wrapper2 {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    left: 65%;
+    top: 20%;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+.btn-select {
+    position: absolute;
+    top: 75%;
+    left: 2.5%;
+    display: flex;
+    padding: 0px 15%;
+    margin: 10px;
+    margin-right: 10px; /* Espaço à direita de cada botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    gap: 25px;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    top: 20%;
+    position: absolute;
+    left: 18%;
+    gap: 300px;
+}
+
+    .navigation button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .navigation span {
+        margin: 0 10px;
+        font-weight: bold;
+    }
+
+.view-options {
+    margin-top: 10px;
+}
+
+    .view-options button {
+        background-color: #e7e7e7;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.calendar {
+    position:absolute;
+    top: 28%;
+    left: 18%;
+    height:45%;
+    width: 42.3%;
+    text-align: center;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+    .calendar h2 {
+        margin: 0;
+        font-size: 24px;
+    }

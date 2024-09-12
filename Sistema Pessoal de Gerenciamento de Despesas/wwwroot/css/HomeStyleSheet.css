@@ -1,0 +1,51 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+}
+
+.body {
+    background-color: #DBDBE1;
+}
+
+.container {
+    display: flex;
+    gap: 60px; /* Espaçamento entre os quadrados */
+}
+
+.square {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Cor de fundo dos quadrados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h1 {
+    position: absolute;
+    top: 7%;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+h2 {
+    position: absolute;
+    top: 45%;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+
+}
+
+.table {
+    background-color: #f0f0f0;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%; /* Largura fixa da tabela */
+    height: 150px; /* Altura fixa da tabela */
+    table-layout: fixed; /* Força o layout fixo */
+    margin: 10px;
+}

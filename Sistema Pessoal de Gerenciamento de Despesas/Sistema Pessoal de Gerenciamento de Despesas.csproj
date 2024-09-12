@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\NovaPasta\**" />
+    <Content Remove="wwwroot\css\NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\css\NovaPasta\**" />
+    <None Remove="wwwroot\css\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\Privacy.cshtml" />
     <Content Remove="wwwroot\css\site.css" />
   </ItemGroup>

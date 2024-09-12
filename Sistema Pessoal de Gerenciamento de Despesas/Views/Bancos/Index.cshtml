@@ -1,8 +1,49 @@
 ﻿
-<h1>Tudo Ok</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/TelaBancosStyleSheet.css" asp-append-version="true" />
+}
+   
 
-<div class="text-center">
-    <button class="btn-inserir">
-        <a class="btn-inserir" type="button" asp-controller="Aluno" asp-action="AdicionarAluno">INSERIR ALUNO</a>
-    </button>
+<div class="card-corpo">
+    <h4>Bancos</h4>
+    <button type="button" class="btn btn-primary"><i class="bi bi-printer-fill mx-2"></i>Imprimir</button>
+</div>
+<h3>Contas Bancárias</h3>
+<span>Você poderá alterar ou deletar suas contas bancarias a qualquer momento</span>
+
+<div class="form-container-conta-principal">
+    <fieldset>
+        <legend>Conta Principal</legend>
+
+        <div class="form-group">
+            <label for="nomeConta">Nome da conta</label>
+            <input type="text" id="nomeConta" name="nomeConta" placeholder="Insira o nome da conta">
+
+            <label for="saldoInicial">Saldo Inicial</label>
+            <input type="text" id="saldoInicial" name="saldoInicial" placeholder="Insira o saldo inicial">
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn salvar">Salvar</button>
+            <button type="button" class="btn excluir">Excluir</button>
+        </div>
+    </fieldset>
+</div>
+<div class="form-container-conta-segundaria">
+    <fieldset>
+        <legend>Conta Segundaria</legend>
+
+        <div class="form-group">
+            <label for="nomeConta">Nome da conta</label>
+            <input type="text" id="nomeConta" name="nomeConta" placeholder="Insira o nome da conta">
+
+            <label for="saldoInicial">Saldo Inicial</label>
+            <input type="text" id="saldoInicial" name="saldoInicial" placeholder="Insira o saldo inicial">
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn salvar">Salvar</button>
+            <button type="button" class="btn excluir">Excluir</button>
+        </div>
+    </fieldset>
 </div>

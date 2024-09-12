@@ -1,4 +1,5 @@
 ﻿
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
@@ -29,55 +30,6 @@
     text-align: center;
 }
 
-.nav-list {
-    list-style-type: none; /* Remove as bolinhas da lista */
-    padding: 0;
-    width: 100%; /* Ocupar a largura total do menu */
-    text-align: justify;
-    letter-spacing: 0.5px;
-    display: inline-block;
-}
-
-    .nav-list li a:hover {
-        background-color: #DBDBE1; /* Fundo cinza claro ao passar o mouse */
-        padding: 10px;
-        touch-action: pinch-zoom; 
-    }
-
-.nav-top {
-    list-style-type: none; /* Remove as bolinhas da lista */
-    padding: 0;
-    width: 100%; /* Ocupar a largura total do menu */
-    text-align: justify;
-    letter-spacing: 0.5px;
-    display: inline-block;
-}
-
-.nav-list2 {
-    width: 100%; /* Ocupar a largura total do menu */
-    text-align: justify;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    position: relative;
-    list-style-type: none;
-    padding: 10px;
-    top: 35%;
-    left: 40px;
-    font-size: 30px;
-}
-.nav-list2 li a:hover {
-    background-color: #DBDBE1; /* Fundo cinza claro ao passar o mouse */
-    padding: 10px;
-    touch-action: pinch-zoom;
-}
-.nav-list2 > li {
-    display: inline-block;
-}
-
-.img, svg {
-    width: 200px; /* Largura do logo */
-    margin-bottom: 0; /* Espaçamento abaixo do logo */
-}
 .img-perfil, svg {
     margin-bottom: 0; /* Espaçamento abaixo do logo */
     width: 60px; /* Largura da imagem */
@@ -86,6 +38,7 @@
     object-fit: cover; /* Ajusta a imagem para cobrir o conteúdo sem distorcer */
     border: 2px solid #007bff;
 }
+
 #Usuario {
     position: absolute;
     text-align: end;
@@ -96,6 +49,7 @@
     font-size: 15px;
     left: 4%;
 }
+
 #f {
     position: relative;
     display: flex;
@@ -111,6 +65,7 @@
     border: 0px solid #DBDBE1; /* Cor e espessura da linha */
     margin-bottom: 25px; /* Espaço abaixo da linha */
 }
+
 #linha2 {
     margin: 0px;
     padding: 0px;
@@ -140,7 +95,7 @@
     left: 300px;
     width: 100%;
     background-color: #DBDBE1;
-    text-align:  left;
+    text-align: left;
     padding: 0.1px;
 }
 
@@ -207,12 +162,12 @@
     display: flex;
     background-color: white;
     position: relative;
-    top: -60px; /* Move para baixo */
-    left: 0px; /* Move para a direita */
+    top: 100px; /* Move para baixo */
+    left: 20px; /* Move para a direita */
     bottom: 200px;
     margin: -10px;
-    margin-right: 20%;
-    padding: 20px ;
+    margin-right: -250%;
+    padding: 70px;
     border-radius: 5px;
     padding-bottom: 2px;
 }
@@ -222,33 +177,17 @@
     display: flex;
     background-color: white;
     position: relative;
-    top: -60px; /* Move para baixo */
+    top: 200px; /* Move para baixo */
     left: 20px; /* Move para a direita */
     bottom: 200px;
     margin: -10px;
-    margin-right: -45%;
-    padding: 45px;
+    margin-right: -250%;
+    padding: 70px;
     border-radius: 5px;
     padding-bottom: 2px;
 }
 
-.saldo-tela {
-    padding: 1px;
-}
-    .saldo-tela > p {
-        position: relative;
-        left: 80px;
-        font-display: font-family: "Open Sans", sans-serif;
-        font-size: 20px;
-    }
 
-.custom-select {
-    position: initial;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 20px;
-    left: 130px;
-}
 
 h5 {
     position: relative;
@@ -257,30 +196,32 @@ h5 {
     font-display: font-family: "Open Sans", sans-serif;
     font-size: 30px;
 }
-h6 {
+
+h3 {
     position: relative;
     left: 20px;
-    top: -10px;
-    font-display: font-family: "Open Sans", sans-serif;
-    font-size: 30px;
+    top: -60px;
+    font-family: font-family: "Open Sans", sans-serif;
+    font-size: 40px;
 }
-
+span {
+    white-space: nowrap;
+    position: relative;
+    top: 24%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    position:absolute;
+}
 .receitas {
     position: relative;
     left: 80px;
     font-display: font-family: "Open Sans", sans-serif;
     font-size: 15px;
-    top:0px;
+    top: 0px;
     left: 300px;
 }
-.despesas {
-    position: relative;
-    left: 80px;
-    font-display: font-family: "Open Sans", sans-serif;
-    font-size: 15px;
-    top: 20px;
-    left: 300px;
-}
+
 
 .container {
     display: flex;
@@ -291,10 +232,11 @@ h6 {
 
     .container > main {
         background-color: #DBDBE1;
-        padding: 20px;
-        padding-bottom: 100px;
-        padding-right: 90px;
+        padding: 0px;
+        padding-bottom: 20%;
+        padding-right: 90%;
     }
+
 @media (max-width: 768px) {
     .card-corpo, card1, card2 {
         flex: 1 1 45%; /* Em telas menores, os itens ocupam 45% */
@@ -317,11 +259,12 @@ h6 {
     left: 0px; /* Move para a direita */
     bottom: 200px;
     margin: 10px;
-    margin-right: -20%;
+    margin-right: -350%;
     padding: 15px;
     border-radius: 5px;
     font-family: "Open Sans", sans-serif;
 }
+
 h4 {
     margin: 0; /* Remove margens padrão do h4 */
     font-family: "Open Sans", sans-serif;
@@ -329,52 +272,103 @@ h4 {
     font-size: 50px;
 }
 
-.btn  {
-        font-size: 20px; /* Aumenta o tamanho do texto */
-}    
 
-.btn-secondary {
-    display: grid;
+
+.form-container-conta-principal {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    width: 50%;
+    position:absolute;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     margin: 10px;
 }
-
-
-.table {
-    background-color: #f0f0f0;
-    padding: 15px;
-    padding-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 120%; /* Largura fixa da tabela */
-    height: 150px; /* Altura fixa da tabela */
-    table-layout: fixed; /* Força o layout fixo */
+.form-container-conta-segundaria {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    margin: 10px;
+    top: 60%;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 0px;
 }
 
-.btn-table {
-    
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 2px solid;
+    top: -5px;
+    position: relative;
+    padding-left: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form-group {
     display: flex;
-    padding: 10px 2px;
-    margin: 10px;
-    margin-right: 10px; /* Espaço à direita de cada botão */
-    color: white;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+    .form-group label {
+        flex: 1;
+        margin-right: -30px;
+    }
+
+    .form-group input {
+        flex: 2;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 150px;
+    }
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 8px 15px;
     border: none;
     border-radius: 4px;
+    font-size: 1em;
     cursor: pointer;
-    gap: 25px;
 }
-    .btn-table > button {
-        font-size: 20px; /* Aumenta o tamanho do texto */
+
+    .btn.salvar {
+        background-color: #007bff;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .btn.excluir {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.8;
     }
 
 
 
-.btn-select {
-    display: flex;
-    gap: 50px;
-    margin: 10px;
-    margin-top: -50px;
-    margin-bottom: 50px;
-    width: 900px; /* Largura do botão */
-    height: 45px; /* Altura do botão */
-}
+
+
+
+

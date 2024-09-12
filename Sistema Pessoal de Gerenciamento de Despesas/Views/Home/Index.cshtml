@@ -1,5 +1,46 @@
-﻿@{
-    ViewData["Title"] = "Sistema Pessoal";
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/HomeStyleSheet.css" asp-append-version="true" />
 }
 
+<h1>Visão geral<i class="bi bi-tv-fill mx-3"></i></h1>
 
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Materia</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td colspan="2">Larry the Bird</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Agendamentos<i class="bi bi-journal-bookmark-fill mx-3"></i></h2>
+
+<div class="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>

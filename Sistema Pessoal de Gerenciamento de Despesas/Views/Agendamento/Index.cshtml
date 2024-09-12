@@ -1,4 +1,68 @@
-﻿
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/AgendaStyleSheet.css" asp-append-version="true" />
+}
 
+<div class="card-corpo">
+    <h4>Agenda</h4>
+</div>
 
-<h1>Tudo Ok</h1>
+<div class="container">
+        <h1>Agenda</h1>
+        <div class="navigation">
+            <button>&lt;</button>
+            <span>Setembro 2024</span>
+            <button>&gt;</button>
+        </div>
+        <div class="calendar">
+            <h2>CALENDÁRIO</h2>
+            @* logica di calendario *@
+        </div>
+</div>
+<div class="btn-select">
+    <button class="btn btn-primary" type="button">Dia</button>
+    <button class="btn btn-primary" type="button">Mês</button>
+    <button class="btn btn-primary" type="button">Ano</button>
+</div>
+
+<div class="container">
+    <div class="form-wrapper1">
+        <h2><i class="bi bi-tag-fill mx-2"></i>Adicionar Lembrete</h2>
+        <form>
+            <label for="nome-lembrete">Nome do Lembrete</label>
+            <input type="text" id="nome-lembrete" name="nome-lembrete">
+
+            <label for="descricao-lembrete">Descrição (opcional)</label>
+            <input type="text" id="descricao-lembrete" name="descricao-lembrete">
+
+            <label for="data-lembrete">Data</label>
+            <input type="date" id="data-lembrete" name="data-lembrete">
+
+            <label for="horario-lembrete">Horário</label>
+            <input type="time" id="horario-lembrete" name="horario-lembrete">
+
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="form-wrapper2">
+        <h2><i class="bi bi-tag-fill mx-2"></i>Agendar Despesa</h2>
+        <form>
+            <label for="tipo-despesa">Tipo de Despesa</label>
+            <select id="tipo-despesa" name="tipo-despesa">
+                <option value="1">Despesa 1</option>
+                <option value="2">Despesa 2</option>
+            </select>
+
+            <label for="descricao-despesa">Descrição (opcional)</label>
+            <input type="text" id="descricao-despesa" name="descricao-despesa">
+
+            <label for="data-despesa">Data</label>
+            <input type="date" id="data-despesa" name="data-despesa">
+
+            <label for="horario-despesa">Horário</label>
+            <input type="time" id="horario-despesa" name="horario-despesa">
+
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+</div>
