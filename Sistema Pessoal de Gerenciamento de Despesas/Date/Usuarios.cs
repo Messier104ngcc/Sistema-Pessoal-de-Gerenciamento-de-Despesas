@@ -15,6 +15,7 @@ namespace Sistema_Pessoal_de_Gerenciamento_de_Despesas.Date
             builder.Property(t => t.Nome).HasColumnType("varchar(20)");
             builder.Property(t => t.UserName).HasColumnType("varchar(50)");
             builder.Property(t => t.Senha).HasColumnType("varchar(14)");
+            builder.Property(t => t.ConfSenha).HasColumnType("varchar(14)");
         }
 
     }

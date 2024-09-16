@@ -38,6 +38,7 @@ body {
 
     .left-panel .logo {
         text-align: center;
+        padding-top:60px;
     }
 
         .left-panel .logo h1 {
@@ -70,6 +71,7 @@ body {
 .right-panel {
     width: 60%;
     padding: 40px;
+    padding-bottom: 15%;
     background-color: #F7F7F7;
     display: flex;
     justify-content: center;
@@ -83,7 +85,7 @@ body {
 
 .user-icon {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
     .user-icon img {
@@ -125,6 +127,24 @@ body {
     display: flex;
     gap: 15px;
 }
+.btn-cadastrar {
+    position: absolute;
+    top: 65.4%;
+    left: 60%;
+    width: 7%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #007BFF;
+    color: white;
+}
+    .btn-cadastrar > a {
+        color: white;
+        text-decoration: none;
+    }
 
 .btn {
     width: 30%;
@@ -136,9 +156,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-    .btn.secondary {
-        background-color: #F0F0F5;
-        color: #333;
+    .btn > a {
+        color: white;
+        text-decoration: none;
     }
 
 .btn {
@@ -149,7 +169,7 @@ body {
 footer {
     position:absolute;
     left: 45%;
-    top: 75%;
+    top: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,7 +190,7 @@ footer {
     justify-content: center;
     position: absolute;
     left: 75%;
-    top: 23%;
+    top: 14%;
     gap: 10px;
 }
     .forgot-support > img {
@@ -207,4 +227,10 @@ footer {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     color: #721c24;
+}
+
+.text-danger {
+    color: red;
+    border-color: #ffeeba;
+    font-size: 15px;
 }

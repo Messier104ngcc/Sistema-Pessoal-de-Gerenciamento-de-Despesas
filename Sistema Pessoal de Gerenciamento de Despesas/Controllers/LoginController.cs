@@ -6,6 +6,7 @@ using Sistema_Pessoal_de_Gerenciamento_de_Despesas.Date;
 using Sistema_Pessoal_de_Gerenciamento_de_Despesas.Date.Respositorio.Interfacer;
 using Sistema_Pessoal_de_Gerenciamento_de_Despesas.Models;
 using System.Security.Claims;
+using System.Text;
 
 namespace Sistema_Pessoal_de_Gerenciamento_de_Despesas.Controllers
 {
@@ -75,20 +76,71 @@ namespace Sistema_Pessoal_de_Gerenciamento_de_Despesas.Controllers
             return RedirectToAction("Index", "Login");
         }
 
-        public IActionResult CadastrarUsuario(Models.Usuarios login) // classe Aluno e obejeto que referencia a classe aluno.
+
+        public IActionResult Cadastrar()
         {
-            //
-            try
+            return View("CadastroIndex");
+        }
+
+        //public IActionResult CadastrarUsuario(string nome, string usuario, string senha, string confsenha)
+        //{
+        //    if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(confsenha))
+        //    {
+        //        TempData["MensagemErro"] = "POR FAVOR, PREENCHA TODOS OS CAMPOS";
+        //    }
+        //    else if (senha != confsenha)
+        //    {
+        //        TempData["MensagemErro"] = "SENHAS NÃO CORRESPONDEM!";
+
+        //    }
+        //    else
+        //    {
+        //        try
+        //        {
+        //            _db_Login.Add();
+        //            _db_SaveChanges();
+
+        //            TempData["MensagemSucesso"] = "Cadastro realizado com sucesso!";
+        //            return RedirectToAction("Index");
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            //ex.Error(ex, "Ocorreu um erro ao processar a requisição.");
+        //            //ModelState.AddModelError(string.Empty, "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
+        //        }
+        //    }
+        //    return RedirectToAction("Index");
+        //}
+
+        // POST: /Account/Register
+        [HttpPost]
+        public async Task<ActionResult> CadastrarUsuario(Models.Usuarios model)
+        {
+            if (ModelState.IsValid)
             {
-                _usuarioRepositorio.CadastrarUsuario(login);
-            }
-            catch (Exception ex)
-            {
-                //ex.Error(ex, "Ocorreu um erro ao processar a requisição.");
-                //ModelState.AddModelError(string.Empty, "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
+                if (_db.Login.Any(t => model.Senha != model.ConfSenha))
+                {
+                    ModelState.AddModelError("", "Senhas não coincidem!.");
+                    return View("CadastroIndex");
+                }
+
+                // Verificar se o usuário já existe
+                if (_db.Login.Any(t => t.UserName == model.UserName))
+                {
+                    ModelState.AddModelError("", "Nome de usuário já existente.");
+                    return View("CadastroIndex");
+                }
+                else
+                {
+                    _db.Login.Add(model);
+                    await _db.SaveChangesAsync();
+                    return RedirectToAction("Index", "Login"); // Redirecionar para a página inicial ou outra página
+                }               
             }
 
-            return RedirectToAction("Index");
+            // Se houver erros, reexibir o formulário
+            return View("CadastroIndex");
         }
     }
 }
