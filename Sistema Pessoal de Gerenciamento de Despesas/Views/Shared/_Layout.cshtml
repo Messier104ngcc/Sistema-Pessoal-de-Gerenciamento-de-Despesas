@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@model Usuarios
+
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -38,7 +41,7 @@
         <hr id="linha2" />
         <ul class="nav-list2">
             <li>
-                <a class="nav-link text-light m-2" asp-area="" asp-controller="Sair" asp-action="Index"><i class="bi bi-box-arrow-right mx-2"></i>Sair</a>
+                <a class="nav-link text-light m-2" asp-controller="Login" asp-action="Sair"><i class="bi bi-box-arrow-right mx-2"></i>Sair</a>
             </li>
         </ul>       
     </header>
@@ -46,7 +49,7 @@
         <hr />
         <div id="f">
             <img class="img-perfil" atl="Imagem Perfil" src="/img/LOGO.png" />
-            <h1 id="Usuario" atl="Usuario">Usuario</h1>
+            <h1 id="Usuario" atl="Usuario">Bem-vindo, @User.Identity.Name!</h1>
             <h2 id="h2">Copyrights © 2024 - Todos os direitos reservados</h2>
         </div>
     </footer>

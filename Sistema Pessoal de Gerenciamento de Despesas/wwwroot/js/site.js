@@ -42,3 +42,12 @@ const mobileNavbar = new MobileNavbar(
     ".nav-list li",
 );
 mobileNavbar.init();
+
+
+// Remove automaticamente as notificações após 5 segundos
+setTimeout(function () {
+    var successAlert = document.getElementById('sucesso-alert');
+    var errorAlert = document.getElementById('erro-alert');
+    if (successAlert) successAlert.style.display = 'none';
+    if (errorAlert) errorAlert.style.display = 'none';
+}, 4000); // 4 segundos

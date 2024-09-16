@@ -1,1 +1,101 @@
-﻿
+﻿@model Usuarios
+
+@{
+    Layout = null; // Remova o layout principal para a tela de login
+}
+
+@* @{
+    var mensagemSucesso = TempData["MensagemSucesso"] as string;
+    var mensagemErro = TempData["MensagemErro"] as string;
+}
+
+@if (!string.IsNullOrEmpty(mensagemSucesso))
+{
+    <div class="alert alert-success" id="sucesso-alert">
+        @mensagemSucesso
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(mensagemErro))
+{
+    <div class="alert alert-danger" id="erro-alert">
+        @mensagemErro
+    </div>
+} *@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achernar - Sistema Pessoal</title>
+    <link rel="stylesheet" href="~/css/LoginStyleSheet.css" asp-append-version="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/lucas-santos-93508a245/"><img src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin" /></a>
+                <a href="https://www.facebook.com/messier104ngc4594"><img src="https://img.icons8.com/ios/50/facebook--v1.png" alt="facebook--v1" /></a>
+                <a href="https://github.com/Messier104ngcc"><img src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" /></a>
+            </div>
+            <div class="logo">
+                <img src="~/img/LOGO.png" alt="Logo Achernar">
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="login-box">
+                <div class="forgot-support">
+                    <a href="">Suporte</a>
+                    <img src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/60/external-support-online-shopping-vitaliy-gorbachev-fill-vitaly-gorbachev-2.png" alt="external-support-online-shopping-vitaliy-gorbachev-fill-vitaly-gorbachev-2" />
+                </div>
+                <div class="user-icon">
+                    <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/gender-neutral-user.png" alt="gender-neutral-user" />
+                </div>
+                <form asp-controller="Login" asp-action="Entrar" method="post" autocomplete="off">
+                    @* caminho para onde o formulario deve ir *@
+                    <div class="form-container">
+                        <form>
+                            <div class="form-group">
+                                <label for="username"><i class="bi bi-person-fill"></i></label>
+                                <input type="text" asp-for="UserName" id="username" name="username" placeholder="Digite seu usuário" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="senha"><i class="bi bi-key-fill"></i></label>
+                                <input type="password" asp-for="Senha" id="senha" name="senha" placeholder="Digite sua senha" required>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#">Esqueceu a senha?</a>
+                            </div>
+                            <div class="button-group">
+                                <button type="submit" class="btn">Entrar</button>
+                                <button type="button" class="btn">Cadastrar</button>
+                            </div>
+                            @if (TempData["MensagemSucesso"] != null)
+                            {
+                                <script>
+                                    alert("@TempData["MensagemSucesso"]");
+                                    window.location.href = '@Url.Action("Index", "Home")';
+                                </script>
+                            }
+
+                            @if (TempData["MensagemErro"] != null)
+                            {
+                                <script>
+                                    alert("@TempData["MensagemErro"]");
+                                </script>
+                            }
+                            <footer>
+                                <p>Copyright © 2024 - Todos os direitos reservados</p>
+                            </footer>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
