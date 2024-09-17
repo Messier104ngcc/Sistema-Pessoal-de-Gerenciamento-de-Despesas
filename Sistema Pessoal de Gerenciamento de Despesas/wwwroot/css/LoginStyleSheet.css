@@ -129,7 +129,7 @@ body {
 }
 .btn-cadastrar {
     position: absolute;
-    top: 65.4%;
+    top: 57.8%;
     left: 60%;
     width: 7%;
     padding: 10px;
@@ -169,7 +169,7 @@ body {
 footer {
     position:absolute;
     left: 45%;
-    top: 85%;
+    top: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,7 +190,7 @@ footer {
     justify-content: center;
     position: absolute;
     left: 75%;
-    top: 14%;
+    top: 19%;
     gap: 10px;
 }
     .forgot-support > img {

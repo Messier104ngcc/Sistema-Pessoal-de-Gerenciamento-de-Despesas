@@ -4,6 +4,13 @@
     Layout = null; // Remova o layout principal para a tela de login
 } 
 
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
